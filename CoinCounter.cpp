@@ -3,7 +3,7 @@ using namespace std;
 
 int main(){
         int pennies;
-        int nickles;
+        int nickels;
         int dimes;
         int quarters;
 
@@ -16,7 +16,7 @@ int main(){
                 cout << "You have " << pennies << " pennies, ";
         }
 
-        if (nickles == 1){
+        if (nickels == 1){
                 cout << "1 nickel, ";
         } else {
                 cout << nickels << " nickels, ";
@@ -35,7 +35,7 @@ int main(){
         else {
                 cout << quarters << " quarters." << endl;
         }
-        int total_cents = pennies + (nickles * 5) + (dimes * 10) + (quarters * 25);
+        int total_cents = pennies + (nickels * 5) + (dimes * 10) + (quarters * 25);
         int dollars = total_cents / 100;
         int cents = total_cents - (dollars * 100);
         float total = dollars + (cents / 100.0);
