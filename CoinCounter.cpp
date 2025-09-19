@@ -45,7 +45,7 @@ int main(){
                 cout << "In total you have " << dollars << " dollars and " << cents << " cents ($" << total << ".00)." << endl;
         }
         else if (dollars == 1){
-                cout << "In total you have " << dollars << " dollar and " << cents << " cents ($" << total << ".)." << endl;
+                cout << "In total you have " << dollars << " dollar and " << cents << " cents ($" << total << ")." << endl;
         }
         else {
                 cout << "In total you have " << dollars << " dollars and " << cents << " cents ($" << total << ")." << endl;
