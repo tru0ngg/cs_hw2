@@ -49,6 +49,9 @@ int main(){
         } else if (dollars == 1 && cents != 1){
                 cout << "In total you have 1 dollar and " << cents << " cents ($"  << fixed << setprecision(2) << (total_cents / 100.0) << ")." << endl;
         }
+        else if (cents == 1) {
+                cout << "In total you have " << dollars << " dollars and " << cents << " cent ($" << fixed << setprecision(2) << (total_cents / 100.0) << ")." << endl;
+        }
         else {
                 cout << "In total you have " << dollars << " dollars and " << cents << " cents ($" << fixed << setprecision(2) << (total_cents / 100.0) << ")." << endl;
         }
