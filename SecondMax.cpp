@@ -2,35 +2,56 @@
 using namespace std;
 
 int main(){
-        int current_max = 0;
-        int second_max = 0;
-        int count = 0;
-        int input;
+        int pennies;
+        int nickels;
+        int dimes;
+        int quarters;
 
-        while(cin >> input){
-                if(input == 0){
-                        count++;
-                        break;
-                }
-                count++;
-                if (input > current_max){
-                        second_max = current_max;
-                        current_max = input;
-                }
-                else if (input > second_max){
-                        second_max = input;
-                }
+        cout << "How many pennies, nickels, dimes, and quarters do you have? " << endl;
+        cin >> pennies >> nickels >> dimes >> quarters;
+        if (pennies == 1){
+                cout << "You have 1 penny, ";
         }
-        if (count < 2){
-                cout << "Max: undefined " << endl;
-                cout << "2nd Max: undefined " << endl;
+        else {
+                cout << "You have " << pennies << " pennies, ";
+        }
+
+        if (nickels == 1){
+                cout << "1 nickel, ";
         } else {
-                cout << "Max: " << current_max << endl;
-                if (second_max == 0){
-                        cout << "2nd Max: undefined" << endl;
-                } else {
-                        cout << "2nd Max: " << second_max << endl;
-                }
+                cout << nickels << " nickels, ";
+        }
+
+        if (dimes == 1){
+                cout <<"1 dime, and ";
+        }
+        else {
+                cout << dimes << " dimes, and ";
+        }
+
+        if (quarters == 1){
+                cout <<"1 quarter. " << endl;
+        }
+        else {
+                cout << quarters << " quarters." << endl;
+        }
+        int total_cents = pennies + (nickels * 5) + (dimes * 10) + (quarters * 25);
+        int dollars = total_cents / 100;
+        int cents = total_cents - (dollars * 100);
+        float total = dollars + (cents / 100.0);
+        if (dollars < 1){
+                cout << "In total you have " << cents << " cents ($" << total << ")." << endl;
+        } else if (dollars == 1 && cents == 0){
+                cout << "In total you have " << dollars << " dollar and " << cents << " cents ($" << total << ".00)." << endl;
+        }
+        else if (cents == 0){
+                cout << "In total you have " << dollars << " dollars and " << cents << " cents ($" << total << ".00)." << endl;
+        }
+        else if (dollars == 1){
+                cout << "In total you have " << dollars << " dollar and " << cents << " cents ($" << total << ".00)." << endl;
+        }
+        else {
+                cout << "In total you have " << dollars << " dollars and " << cents << " cents ($" << total << ")." << endl;
         }
         return 0;
 }
