@@ -1,32 +1,58 @@
 #include <iostream>
-#include <iomanip>
+using namespace std;
 
-int main() {
-    int pennies, nickels, dimes, quarters;
+int main(){
+        int pennies;
+        int nickels;
+        int dimes;
+        int quarters;
 
-    std::cout << "How many pennies, nickels, dimes, and quarters do you have?" << std::endl;
-    std::cin >> pennies >> nickels >> dimes >> quarters;
+        cout << "How many pennies, nickels, dimes, and quarters do you have? " << endl;
+        cin >> pennies >> nickels >> dimes >> quarters;
+        if (pennies == 1){
+                cout << "You have 1 penny, ";
+        }
+        else {
+                cout << "You have " << pennies << " pennies, ";
+        }
 
-    double total_value = (pennies * 0.01) + (nickels * 0.05) + (dimes * 0.10) + (quarters * 0.25);
-    int total_cents = static_cast<int>(total_value * 100 + 0.5); // Add 0.5 for proper rounding
+        if (nickels == 1){
+                cout << "1 nickel, ";
+        } else {
+                cout << nickels << " nickels, ";
+        }
 
-    int dollars = total_cents / 100;
-    int cents = total_cents % 100;
+        if (dimes == 1){
+                cout <<"1 dime, and ";
+        }
+        else {
+                cout << dimes << " dimes, and ";
+        }
 
-    std::cout << "You have ";
-    std::cout << pennies << (pennies == 1 ? " penny" : " pennies") << ", ";
-    std::cout << nickels << (nickels == 1 ? " nickel" : " nickels") << ", ";
-    std::cout << dimes << (dimes == 1 ? " dime" : " dimes") << ", and ";
-    std::cout << quarters << (quarters == 1 ? " quarter" : " quarters") << "." << std::endl;
-
-    std::cout << "In total you have ";
-
-    if (total_value < 1.0) {
-        std::cout << cents << " cents." << std::endl;
-    } else {
-        std::cout << dollars << (dollars == 1 ? " dollar" : " dollars") << " and ";
-        std::cout << cents << " cents." << std::endl;
-    }
-
-    return 0;
+        if (quarters == 1){
+                cout <<"1 quarter. " << endl;
+        }
+        else {
+                cout << quarters << " quarters." << endl;
+        }
+        int total_cents = pennies + (nickels * 5) + (dimes * 10) + (quarters * 25);
+        int dollars = total_cents / 100;
+        int cents = total_cents - (dollars * 100);
+        int total = dollars + (cents / 100.0);
+        if (dollars < 1){
+                cout << "In total you have " << cents << " cents ($" << total << ")." << endl;
+        } 
+        else if (dollars == 1 && cents == 0){
+                cout << "In total you have " << dollars << " dollar and " << cents << " cents ($" << total << ".00)." << endl;
+        }
+        else if (dollars == 1){
+                cout << "In total you have " << dollars << " dollar and " << cents << " cents ($" << total << ")." << endl;
+        }
+        else if (cents == 0){
+                cout << "In total you have " << dollars << " dollars and " << cents << " cents ($" << total << ".00)." << endl;
+        }
+        else {
+                cout << "In total you have " << dollars << " dollars and " << cents << " cents ($" << total << ")." << endl;
+        }
+        return 0;
 }
