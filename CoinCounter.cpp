@@ -7,7 +7,7 @@ int main(){
         int dimes;
         int quarters;
 
-        cout << "How many pennies, nickles, dimes, and quarters do you have? " << endl;
+        cout << "How many pennies, nickels, dimes, and quarters do you have? " << endl;
         cin >> pennies >> nickles >> dimes >> quarters;
         if (pennies == 1){
                 cout << "You have 1 penny, ";
@@ -17,9 +17,9 @@ int main(){
         }
 
         if (nickles == 1){
-                cout << "1 nickle, ";
+                cout << "1 nickel, ";
         } else {
-                cout << nickles << " nickles, ";
+                cout << nickels << " nickels, ";
         }
 
         if (dimes == 1){
