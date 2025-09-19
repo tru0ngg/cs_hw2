@@ -7,7 +7,7 @@ int main(){
         int dimes;
         int quarters;
 
-        cout << "How many pennies, nickles, dimes, and quarters do you have?" << endl;
+        cout << "How many pennies, nickles, dimes, and quarters do you have? " << endl;
         cin >> pennies >> nickles >> dimes >> quarters;
         if (pennies == 1){
                 cout << "You have 1 penny, ";
@@ -33,7 +33,7 @@ int main(){
                 cout <<"1 quarter. " << endl;
         }
         else {
-                cout << quarters << " quarters. " << endl;
+                cout << quarters << " quarters." << endl;
         }
         int total_cents = pennies + (nickles * 5) + (dimes * 10) + (quarters * 25);
         int dollars = total_cents / 100;
