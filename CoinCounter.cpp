@@ -23,7 +23,7 @@ int main(){
         }
 
         if (dimes == 1){
-                cout <<"1 dime, ";
+                cout <<"1 dime, and ";
         }
         else {
                 cout << dimes << " dimes, and ";
