@@ -26,7 +26,7 @@ int main(){
                 cout <<"1 dime, ";
         }
         else {
-                cout << dimes << " dimes, ";
+                cout << dimes << " dimes, and ";
         }
 
         if (quarters == 1){
