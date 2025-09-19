@@ -38,7 +38,7 @@ int main(){
         int total_cents = pennies + (nickels * 5) + (dimes * 10) + (quarters * 25);
         int dollars = total_cents / 100;
         int cents = total_cents - (dollars * 100);
-        int total = dollars + (cents / 100.0);
+        float total = dollars + (cents / 100.0);
         if (dollars < 1){
                 cout << "In total you have " << cents << " cents ($" << total << ")." << endl;
         } 
