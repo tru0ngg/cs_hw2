@@ -8,7 +8,7 @@ int main(){
         int quarters;
 
         cout << "How many pennies, nickels, dimes, and quarters do you have? " << endl;
-        cin >> pennies >> nickles >> dimes >> quarters;
+        cin >> pennies >> nickels >> dimes >> quarters;
         if (pennies == 1){
                 cout << "You have 1 penny, ";
         }
