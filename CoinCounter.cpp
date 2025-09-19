@@ -40,12 +40,12 @@ int main(){
         int cents = total_cents - (dollars * 100);
         float total = dollars + (cents / 100.0);
         if (dollars < 1){
-                cout << "In total you have " << cents << " cents ($" << total << ")" << endl;
+                cout << "In total you have " << cents << " cents ($" << total << ")." << endl;
         } else if (cents == 0){
-                cout << "In total you have " << dollars << " dollars and " << cents << " cents ($" << total << ".00)" << endl;
+                cout << "In total you have " << dollars << " dollars and " << cents << " cents ($" << total << ".00)." << endl;
         }
         else {
-                cout << "In total you have " << dollars << " dollars and " << cents << " cents ($" << total << ")" << endl;
+                cout << "In total you have " << dollars << " dollars and " << cents << " cents ($" << total << ")." << endl;
         }
         return 0;
 }
